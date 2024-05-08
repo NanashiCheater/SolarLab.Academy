@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <InvariantGlobalization>true</InvariantGlobalization>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <UserSecretsId>20dd0fa7-b662-4be4-a1db-760ab59af4a3</UserSecretsId>
+        <DockerfileContext>..\..</DockerfileContext>
+        <DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+	    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.3" />
+	    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.4" />
+	    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.1" />
+	    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.3">
+	      <PrivateAssets>all</PrivateAssets>
+	      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	    </PackageReference>
+	    <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="7.5.1" />
+	    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.5.1" />
+	    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
+	    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+	    <PackageReference Include="Serilog" Version="3.1.1" />
+	    <PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
+	    <PackageReference Include="Serilog.Extensions.Hosting" Version="8.0.0" />
+	    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+		<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.0" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.5.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Application\SolarLab.Academy.AppServices\SolarLab.Academy.AppServices.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\SolarLab.Academy.ComponentRegistrar\SolarLab.Academy.ComponentRegistrar.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\SolarLab.Academy.DataAccess\SolarLab.Academy.DataAccess.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\SolarLab.Academy.Infrastructure\SolarLab.Academy.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>

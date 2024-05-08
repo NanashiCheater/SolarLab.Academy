@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Remove="User\Configutations\**" />
+      <EmbeddedResource Remove="User\Configutations\**" />
+      <None Remove="User\Configutations\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Application\SolarLab.Academy.AppServices\SolarLab.Academy.AppServices.csproj" />
+      <ProjectReference Include="..\..\Domain\SolarLab.Academy.Domain\SolarLab.Academy.Domain.csproj" />
+      <ProjectReference Include="..\SolarLab.Academy.Infrastructure\SolarLab.Academy.Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="NewFolder\" />
+    </ItemGroup>
+
+</Project>
